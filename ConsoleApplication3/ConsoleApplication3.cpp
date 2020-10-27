@@ -5,21 +5,31 @@
 #include "raylib.h"
 
 
-class testEntity : Entity
-{
-public:
-	testEntity() : Entity(64, 64, 80, 80, RED) {
+// scene
+Scene scene;
 
-	}
-};
+
+//class testEntity : public Entity
+//{
+//public:
+//	testEntity() : Entity(64, 64, 100, 15, RED) {
+//
+//	}
+//
+//};
+
+
+
+void init() {
+	
+}
+
 
 int main()
 {
 
-	Scene scene;
+	init();
 
-	testEntity testE;
-	scene.addEntity(testE);
 
 	InitWindow(640,480,"Hello World");
 
@@ -30,9 +40,11 @@ int main()
 
 		ClearBackground(RAYWHITE);
 
-		DrawRectangle(10,10,20,20,RED);
+		for (auto& en : scene.entites) {
+			en.draw();
+		}
 
-
+		DrawFPS(3, 3);
 		EndDrawing();
 	}
 

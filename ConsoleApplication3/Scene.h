@@ -7,9 +7,9 @@
 class Scene
 {
 
-private:
+public:
 	std::list<Entity> entites;
-	//std::list<Entity> test;
+	std::list<Entity> test;
 
 
 public:

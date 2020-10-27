@@ -24,16 +24,15 @@ public:
 	}
 
 	~Entity() {
-		delete& x;
+		/*delete& x;
 		delete& y;
 		delete& width;
 		delete& height;
-		delete& color;
-
+		delete& color;*/
 	}
 
-protected:
-	void draw(void*);
+public:
+	void draw();
 
 
 };

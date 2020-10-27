@@ -7,5 +7,5 @@ void Scene::addEntity(Entity e)
 
 void Scene::removeEntity(Entity e)
 {
-	this->entites.remove(e);
+	//this->entites.remove(e);
 }
