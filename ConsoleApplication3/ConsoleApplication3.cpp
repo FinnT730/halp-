@@ -18,8 +18,7 @@ int main()
 
 	Scene scene;
 
-	Entity testE = testEntity();
-
+	testEntity testE;
 	scene.addEntity(testE);
 
 	InitWindow(640,480,"Hello World");
