@@ -1,4 +1,6 @@
 
+#include <stdio.h>
+
 #include "Entity.h"
 #include "Scene.h"
 
@@ -21,19 +23,27 @@ Scene scene;
 
 
 void init() {
-	
-}
 
+}
 
 int main()
 {
+
+	using c_predfun = int(const void*, const void*);
+	using cpp_predfun = int(const void*, const void*);
+
+	for (int i = 0; i < 400; i++) {
+		for (int j = 0; j < 400; j++) {
+			scene.addEntity(Entity(i, j + 1, 2, 2, RED));
+		}
+	}
 
 	init();
 
 
 	InitWindow(640,480,"Hello World");
 
-	SetTargetFPS(60);
+	//SetTargetFPS(60);
 
 	while (!WindowShouldClose()) {
 		BeginDrawing();
